@@ -21,7 +21,7 @@ public class ObstacleSpawner : MonoBehaviour
         {
 
             Instantiate(obstPrefab, new Vector3(9.2f, value, -0.95f), Quaternion.identity, transform);
-            Instantiate(parctileSyst, new Vector3(9.2f, value, 0), Quaternion.identity, transform);
+            //Instantiate(parctileSyst, new Vector3(9.2f, value, 0), Quaternion.identity, transform);
 
             FramesTillLastSpawn = (int)spawnSpeed;
         }
