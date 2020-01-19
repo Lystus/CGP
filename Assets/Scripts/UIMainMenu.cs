@@ -10,8 +10,8 @@ public class UIMainMenu : MonoBehaviour
    
    public void StartGame ()
    {
-		Debug.Log("Play");
-   	   SceneManager.LoadScene("Map", LoadSceneMode.Single); 
+	    Debug.Log("Play");
+        SceneManager.LoadScene("Map", LoadSceneMode.Single); 
    }
    
 

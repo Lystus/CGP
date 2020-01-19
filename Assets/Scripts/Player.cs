@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,7 +13,13 @@ public class Player : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            SceneManager.LoadScene("Ded", LoadSceneMode.Single);
+        }
+    }
     void FixedUpdate()
     {
         if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space)) 
